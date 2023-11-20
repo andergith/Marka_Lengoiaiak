@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+
+    <style>
+        .taula{
+            font-family: Arial, Helvetica, sans-serif;
+            grid-template-columns: repeat(3,200px);
+            display: grid;
+            grid-gap:2px;
+            width: 600px;
+            margin: 0 auto;
+            grid-template: 
+                '   .   celda1 celda1 '
+                'celda2 celda3 celda3 '
+                'celda4 celda4 celda4 '
+        }
+
+        .taula div{
+            background-color: gray;
+            color: white;
+            padding: 20px;
+        }
+
+        .taula .celda1{
+            grid-area: celda1;
+            text-align: center;
+            background-color: orange;
+        }
+
+        .taula .celda2{
+            grid-area: celda2;
+            text-align: center;
+        }
+
+        .taula .celda3{
+            grid-area: celda3;
+        }
+
+        .taula .celda4{
+            grid-area: celda4;
+            text-align: center;
+            background-color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="taula">
+
+        <div class="celda1">celda1</div>
+        <div class="celda2">celda2</div>
+        <div class="celda3">
+            celda3 <br>
+            contenido que marca el alto de 
+            la parte central de la página
+        </div>
+        <div class="celda4">celda4</div>
+                    
+    </div>
+</body>
+</html>

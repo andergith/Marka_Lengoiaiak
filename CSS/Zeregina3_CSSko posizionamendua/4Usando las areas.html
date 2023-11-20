@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+
+    <style>
+        .taula{
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            grid-gap:2px;
+            grid-template-columns: repeat(2,200px);
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        .taula div{
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .celda1{
+            grid-column: 1/4;
+        }
+
+        .celda2{
+            grid-row: 2/ span 3
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="taula">
+
+        <div class="celda1">celda1</div>
+        <div class="celda2">celda2</div>
+        <div>celda3</div>
+        <div>celda4</div>
+        <div>celda5</div>
+        <div>celda6</div>
+            
+    </div>
+</body>
+</html>

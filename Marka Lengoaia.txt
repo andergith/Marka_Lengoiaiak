@@ -1,0 +1,162 @@
+Achaf Allach
+Mikel Telletxea
+Ander Gonzalez
+--------------------------------
+Ejemplo 1 HTML
+--------------------------------
+
+<html>
+<body>
+
+<table border="1">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+---------------------------------
+Ejemplo 2 CSS
+---------------------------------
+
+body
+{
+background-color:#d0e4fe;
+}
+h1
+{
+color:orange;
+text-align:center;
+}
+p
+{
+font-family:"Times New Roman";
+font-size:20px;
+}
+--------------------------------
+Ejemplo 3 DHTML
+--------------------------------
+
+<html>
+<body>
+
+<script type="text/javascript">
+i=0;
+while (i<=5)
+{
+document.write("The number is " + i);
+document.write("<br />");
+i++;
+}
+</script>
+
+<p>Explanation:</p>
+<p><b>i</b> is equal to 0.</p>
+<p>While <b>i</b> is less than , or equal to, 5, the loop will continue to run.</p>
+<p><b>i</b> will increase by 1 each time the loop runs.</p>
+
+</body>
+</html>
+
+--------------------------------
+Ejemplo 4 XML
+--------------------------------
+
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+- <!--  Edited by XMLSpy® 
+  --> 
+- <CATALOG>
+
+- <CD>
+  <TITLE>One night only</TITLE> 
+  <ARTIST>Bee Gees</ARTIST> 
+  <COUNTRY>UK</COUNTRY> 
+  <COMPANY>Polydor</COMPANY> 
+  <PRICE>10.90</PRICE> 
+  <YEAR>1998</YEAR> 
+  </CD>
+- <CD>
+  <TITLE>Sylvias Mother</TITLE> 
+  <ARTIST>Dr.Hook</ARTIST> 
+  <COUNTRY>UK</COUNTRY> 
+  <COMPANY>CBS</COMPANY> 
+  <PRICE>8.10</PRICE> 
+  <YEAR>1973</YEAR> 
+  </CD>
+- <CD>
+  <TITLE>Maggie May</TITLE> 
+  <ARTIST>Rod Stewart</ARTIST> 
+  <COUNTRY>UK</COUNTRY> 
+  <COMPANY>Pickwick</COMPANY> 
+  <PRICE>8.50</PRICE> 
+  <YEAR>1990</YEAR> 
+  </CD>
+- </CATALOG>
+
+
+---------------------------------
+Ejemplo 5 XSLT
+---------------------------------
+
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+- <!--  Edited by XMLSpy® --> 
+- <html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
+- <body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
+- <xsl:for-each select="breakfast_menu/food">
+- <div style="background-color:teal;color:white;padding:4px">
+- <span style="font-weight:bold">
+  <xsl:value-of select="name" /> 
+  </span>
+  - 
+  <xsl:value-of select="price" /> 
+  </div>
+- <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
+  <xsl:value-of select="description" /> 
+- <span style="font-style:italic">
+  <xsl:value-of select="calories" /> 
+  (calories per serving) 
+  </span>
+  </div>
+  </xsl:for-each>
+  </body>
+  </html>
+
+---------------------------------
+Ejemplo 6 XML 
+---------------------------------
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+
+<channel>
+  <title>W3Schools Home Page</title>
+  <link>http://www.w3schools.com</link>
+  <description>Free web building tutorials</description>
+  <item>
+    <title>RSS Tutorial</title>
+    <link>http://www.w3schools.com/rss</link>
+    <description>New RSS tutorial on W3Schools</description>
+  </item>
+  <item>
+    <title>XML Tutorial</title>
+    <link>http://www.w3schools.com/xml</link>
+    <description>New XML tutorial on W3Schools</description>
+  </item>
+</channel>
+
+</rss>
+
+--------------------------------
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+
+    <style>
+        .taula{
+            font-family: Arial, Helvetica, sans-serif;
+            grid-template-columns: repeat(4,100px);
+            display: grid;
+            grid-gap:1px;
+            grid-auto-flow: column dense;
+            width:500px;
+            margin: 0 auto;
+            grid-template: 
+            'celda1 celda1 celda2 celda2'
+            'celda3 celda3 celda4 celda4'
+            'celda5 celda5 celda4 celda4';
+        }
+
+        .taula div{
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .celda1{
+            grid-area: celda1
+        }
+
+
+        .celda2{
+            grid-area: celda2
+        }
+
+        
+        .celda3{
+            grid-area: celda3
+        }
+
+        
+        .celda4{
+            grid-area: celda4
+        }
+
+        
+        .celda5{
+            grid-area: celda5
+        }
+
+        .anidado{
+            background-color: white;
+            grid-template: ' a a ' auto;
+        }
+
+        .gridanidado{
+            grid-area: a;
+        }
+
+        .anidado div{
+            padding: 18px;
+            color: white;
+            background-color: black;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="taula">
+
+        <div class="celda1">celda1</div>
+        <div class="celda2">celda2</div>
+        <div class="celda3">celda3</div>
+        <div class="celda4">
+            <div class="anidado">
+                <div class="gridanidado">grid anidado</div>
+                <div class="Lista2">Lista2</div>
+                <div class="Lista2">Lista3</div>
+                <div class="Lista2">Lista4</div>
+                <div class="Lista2">Lista5</div>
+            </div>
+        </div>
+        <div class="celda5">celda5</div>
+        
+    </div>
+</body>
+</html>
