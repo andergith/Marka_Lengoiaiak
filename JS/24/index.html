@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    #eremu {
+        background-color: #bdbda9;
+        border: 1px solid #000000;
+        font-size: 40px;
+    }
+</style>
+</head>
+<body>
+    <p id="eremu">Nork aurkitu zuen Amerika?Eta noiz izan zen?</p>
+    Atzeko kolorea:
+    <select onChange="aldatuAtzekoKolorea()" id="atzekokolorea">
+        <option value="#ffff00">horra</option>
+        <option value="#ff0000">gorria</option>
+        <option value="#00ff00">berdea</option>
+        <option value="#0000ff">urdina</option>
+    </select>
+    <br> Letraren kolorea:
+    <select onChange="aldatuLetrarenKolorea()" id="letrarenkolorea">
+        <option value="#000000">beltza</option>
+        <option value="#ff0000">gorria</option>
+        <option value="#00ff00">berdea</option>
+        <option value="#0000ff">urdina</option>
+    </select>
+    <br> Letraren tamaina aldatu:
+    <select onChange="aldatuLetrarenTamaina()" id="letrarentamaina">
+        <option value="10px">10</option>
+        <option value="12px">12</option>
+        <option value="14px">14</option>
+        <option value="16px">16</option>
+        <option value="18px">18</option>
+        <option value="20px">20</option>
+        <option value="22px">22</option>
+        <option value="24px">24</option>
+    </select>
+    <br> Letraren tipoa aldatu:
+    <select onChange="aldatuLetrarenTipoa()" id="letrarentipoa">
+        <option value="Arial">Arial</option>
+        <option value="Courier">Curier</option>
+        <option value="Verdana">Verdana</option>
+    </select>
+    <br> Letraren estiloa aldatu:
+    <select onChange="aldatuLetrarenEstiloa()" id="letrarenestiloa">
+        <option value="normal">Normala</option>
+        <option value="Italic">Italikoa</option>
+        <option value="Oblique">Oblikoa</option>
+    </select>
+    <br> Letraren pisua aldatu:
+    <select onChange="aldatuLetrarenPisua()" id="letrarenpisua">
+        <option value="normal">Normala</option>
+        <option value="bold">Lodia</option>
+    </select>
+    <br> Letraren lerrokatua aldatu:
+    <select onChange="aldatuLetrarenLerrokatua()" id="letrarenlerrokatua">
+        <option value="left">Ezkerrean</option>
+        <option value="right">Eskuinean</option>
+        <option value="center">Erdian</option>
+    </select>
+    <br> Letraren dekorazioa aldatu:
+    <select onChange="aldatuLetrarenDekorazioa()" id="letrarendekorazioa">
+        <option value="none">Bat ere ez</option>
+        <option value="underline">Azpimarkatua</option>
+        <option value="overline">Gainean</option>
+        <option value="line-through">Lerro bat</option>
+    </select>
+    <br> Letren arteko espazioa aldatu:
+    <select onChange="aldatuLetrenArtekoEspazioa()" id="letrenartekoespazioa">
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="9">9</option>
+        <option value="12">12</option>
+        <option value="15">15</option>
+    </select>
+    <br> Hitzen arteko espazioa aldatu:
+    <select onChange="aldatuHitzenArtekoEspazioa()" id="hitzenartekoespazioa">
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="9">9</option>
+        <option value="12">12</option>
+        <option value="15">15</option>
+    </select>
+    <br> Testuaren eraldaketa aldatu:
+    <select onChange="aldatuTestuarenEraldaketa()" id="testuareneraldaketa">
+        <option value="none">Bat ere ez</option>
+<option value="hidden">hidden</option>
+<option value="dotted">dotted</option>
+<option value="dashed">dashed</option>
+<option value="solid">solid</option>
+<option value="double">double</option>
+<option value="groove">groove</option>
+<option value="ridge">ridge</option>
+<option value="inset">inset</option>
+<option value="outset">outset</option>
+    </select>
+    <br> Color de borde:
+    <select onChange="cambiarColorBorde()" id="colorborde">
+        <option value="#000000">beltza</option>
+        <option value="#ffff00">horia</option>
+        <option value="#ff0000">gorria</option>
+        <option value="#00ff00">berdea</option>
+        <option value="#0000ff">urdina</option>
+    </select>
+    <br> padding:
+    <select onChange="cambiarPadding()" id="padding">
+        <option value="0">0</option>
+        <option value="4" selected="selected">4</option>
+        <option value="8">8</option>
+        <option value="12">12</option>
+        <option value="16">16</option>
+        <option value="20">20</option>
+    </select>
+    <br> margin:
+    <select onChange="cambiarMargin()" id="margin">
+        <option value="0">0</option>
+        <option value="4" selected="selected">4</option>
+        <option value="8">8</option>
+        <option value="12">12</option>
+        <option value="16">16</option>
+        <option value="20">20</option>
+    </select>
+    <script>
+    function cambiarColorFondo() {
+        let pun = document.getElementById('colorfondo');
+        let punrec = document.getElementById('eremu');
+        punrec.style.backgroundColor = pun.value;
+    }
+
+    function cambiarColorFuente() {
+        let pun = document.getElementById('colorfuente');
+        let punrec = document.getElementById('eremu');
+        punrec.style.color = pun.value;
+    }
+
+    function cambiarTamanoFuente() {
+        let pun = document.getElementById('tamanofuente');
+        let punrec = document.getElementById('eremu');
+        punrec.style.fontSize = pun.value;
+    }
+
+    function cambiarTipoFuente() {
+        let pun = document.getElementById('tipofuente');
+        let punrec = document.getElementById('eremu');
+        punrec.style.fontFamily = pun.value;
+    }
+
+    function cambiarEstiloFuente() {
+        let pun = document.getElementById('estilofuente');
+        let punrec = document.getElementById('eremu');
+        punrec.style.fontStyle = pun.value;
+    }
+
+    function cambiarPesoFuente() {
+        let pun = document.getElementById('pesofuente');
+        let punrec = document.getElementById('eremu');
+        punrec.style.fontWeight = pun.value;
+    }
+
+    function cambiarAlineacionFuente() {
+        let pun = document.getElementById('alineacionfuente');
+        let punrec = document.getElementById('eremu');
+        punrec.style.textAlign = pun.value;
+    }
+
+    function cambiarDecoracionFuente() {
+        let pun = document.getElementById('decoracionfuente');
+        let punrec = document.getElementById('eremu');
+        punrec.style.textDecoration = pun.value;
+    }
+
+    function cambiarEspacioLetras() {
+        let pun = document.getElementById('espacioletras');
+        let punrec = document.getElementById('eremu');
+        punrec.style.letterSpacing = pun.value + "px";
+    }
+
+    function cambiarEspacioPalabras() {
+        let pun = document.getElementById('espaciopalabras');
+        let punrec = document.getElementById('eremu');
+        punrec.style.wordSpacing = pun.value + "px";
+    }
+
+    function cambiarTransformacionTexto() {
+        let pun = document.getElementById('transformaciontexto');
+        let punrec = document.getElementById('eremu');
+        punrec.style.textTransform = pun.value;
+    }
+
+    function cambiarAnchoBorde() {
+        let pun = document.getElementById('anchoborde');
+        let punrec = document.getElementById('eremu');
+        punrec.style.borderWidth = pun.value;
+    }
+
+    function cambiarEstiloBorde() {
+        let pun = document.getElementById('estiloborde');
+        let punrec = document.getElementById('eremu');
+        punrec.style.borderStyle = pun.value;
+    }
+
+    function cambiarColorBorde() {
+        let pun = document.getElementById('colorborde');
+        let punrec = document.getElementById('eremu');
+        punrec.style.borderColor = pun.value;
+    }
+
+    function cambiarPadding() {
+        let pun = document.getElementById('padding');
+        let punrec = document.getElementById('eremu');
+        punrec.style.padding = pun.value + "px";
+    }
+
+    function cambiarMargin() {
+        let pun = document.getElementById('margin');
+        let punrec = document.getElementById('eremu');
+        punrec.style.margin = pun.value + "px";
+    }
+    </script>
+</body>
+</html>
