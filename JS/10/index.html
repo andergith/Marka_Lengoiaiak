@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bloke1">
+        <h1>Lehenengo paragrafo blokea.</h1>
+        <p>Hau da lehenengo paragrafoa</p>
+        <p>Hau da bigarren paragrafoa</p>
+        <p>Hau da hirugarren paragrafoa</p>
+    </div>
+    <div id="bloke2">
+        <h1>Bigarren paragrafo blokea.</h1>
+        <p>Hau da lehenengo paragrafoa</p>
+        <p>Hau da bigarren paragrafoa</p>
+        <p>Hau da hirugarren paragrafoa</p>
+    </div>
+    <input type="button" value="Paragrafo bakoitzari puntua gehitu" onClick="aldatuParrafoak()">
+
+    <script>
+        function aldatuParrafoak() {
+            let obj = document.getElementById("bloke2");
+            let zerrenda = obj.getElementsByTagName('p');
+            for (let elemento of zerrenda)
+                elemento.childNodes[0].nodeValue = elemento.childNodes[0].nodeValue + '.';
+        }
+    </script>
+</body>
+
+</html>

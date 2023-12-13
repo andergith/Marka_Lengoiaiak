@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="zerrenda1">
+        <li>Aukera 1.</li>
+        <li>Aukera 2.</li>
+        <li>Aukera 3.</li>
+    </ul>
+    <input type="button" value="Elementua mugitu" onClick="elementuaMugitu()">
+    <ul id="zerrenda2">
+    </ul>
+    <hr>
+    <div id="estekak">
+        <a href="#">Esteka 1</a><br>
+        <a href="#">Esteka 2</a><br>
+        <a href="#">Esteka 3</a><br>
+    </div>
+    <input type="button" onclick="nodoakKlonatu()" value="Nodoak klonatu">
+    <div id="estekakberriak">
+    </div>
+    <script>
+        function elementuaMugitu() {
+            let erreferentzia1 = document.getElementById('zerrenda1');
+            let erreferentziaHijo = erreferentzia1.firstElementChild;
+            let erreferentzia2 = document.getElementById('zerrenda2');
+            erreferentzia2.appendChild(erreferentziaHijo);
+        }
+
+        let ordena = 1;
+
+        function nodoakKlonatu() {
+            let id = document.getElementById("estekak");
+            let berriak = id.cloneNode(true);
+            berriak.setAttribute("id", 'estekakberriak' + ordena);
+            ordena++;
+            id = document.getElementById("estekakberriak");
+            id.appendChild(berriak);
+        } 
+    </script>
+</body>
+</html>

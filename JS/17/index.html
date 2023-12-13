@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="lotura1" href="https://www.kokodoa.online">kokodoa.</a><br>
+    <a id="lotura2" href="https://www.youtube.com">Youtube</a><br>
+    <input type="button" value="Atributuak kendu" onClick="kenduAtributua()">
+    <input type="button" value="Atributuak hasieratu" onClick="hasieratuAtributua()">
+    <script>
+        function kenduAtributua() {
+            let erreferentziaPuntua = document.getElementById('lotura1');
+            erreferentziaPuntua.removeAttribute('href');
+            erreferentziaPuntua = document.getElementById('lotura2');
+            erreferentziaPuntua.removeAttribute('href');
+        }
+
+        function hasieratuAtributua() {
+            let erreferentziaPuntua = document.getElementById('lotura1');
+            erreferentziaPuntua.setAttribute('href', 'https://www.kokodoa.online');
+            erreferentziaPuntua = document.getElementById('lotura2');
+            erreferentziaPuntua.setAttribute('href', 'https://www.youtube.com');
+        }
+    </script>
+</body>
+
+</html>

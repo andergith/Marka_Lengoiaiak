@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parrafoak"></div>
+    <input type="button" value="Elementu motako nodoa gehitu" onClick="gehitu()">
+    <input type="button" value="Lehenengo elementu motako nodoa kendu" onClick="kenduLehenengo()">
+    <input type="button" value="Azken elementu motako nodoa kendu" onClick="kenduAzkena()">
+    <script>
+        let kontadorea = 1;
+
+        function gehitu() {
+            let elementuBerria = document.createElement("p");
+            let testuBerria = document.createTextNode("Kaixo Mundua " + kontadorea + " - ");
+            kontadorea++;
+            elementuBerria.appendChild(testuBerria);
+            let erreferentziaPuntua = document.getElementById("parrafoak");
+            erreferentziaPuntua.appendChild(elementuBerria);
+        }
+
+        function kenduLehenengo() {
+            let erreferentziaPuntua = document.getElementById("parrafoak");
+            if (erreferentziaPuntua.children.length > 0)
+                erreferentziaPuntua.removeChild(erreferentziaPuntua.children[0]);
+        }
+
+        function kenduAzkena() {
+            let erreferentziaPuntua = document.getElementById("parrafoak");
+            if (erreferentziaPuntua.children.length > 0)
+                erreferentziaPuntua.removeChild(erreferentziaPuntua.children[erreferentziaPuntua.children.length - 1]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <body>
+        <div id="parrafoak">
+            <p>Hau da lehenengo paragrafoa</p>
+            <p>Hau da bigarren paragrafoa</p>
+            <p>Hau da hirugarren paragrafoa</p>
+        </div>
+        <input type="button" value="Hurrengo paragrafoetara sartu" onClick="hurrengoParrafo()">
+      
+        <script>
+            function hurrengoParrafo() {
+                let erakusle1 = document.getElementById('parrafoak');
+                let erakusle2 = erakusle1.firstChild;
+                while (erakusle2 != null) {
+                    if (erakusle2.nodeType == Node.ELEMENT_NODE)
+                        alert(erakusle2.childNodes[0].nodeValue);
+                    else
+                        alert('Ez da elementu motako nodoa');
+                    erakusle2 = erakusle2.nextSibling;
+                }
+            }
+        </script>
+    </body>
+    
+</body>
+</html>

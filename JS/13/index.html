@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paragrafoak">
+    </div>
+    <input type="button" value="Elementu motako nodoa gehitu" onClick="gehitu()">
+    <script>
+        function gehitu() {
+            let elementua = document.createElement('p');
+            let testua = document.createTextNode('Kaixo Mundua');
+            elementua.appendChild(testua);
+            let obj = document.getElementById('paragrafoak');
+            obj.appendChild(elementua);
+        }
+    </script>
+</body>
+
+</html>
