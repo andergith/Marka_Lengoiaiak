@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="irudia perro.jpg" alt="irudia perro" id="irudiaperro" onload="irudiahanditu()" onclick="irudiatxikitu()">
+    <script>
+        function irudiahanditu() {
+            var img = document.getElementById('irudiaperro');
+            img.style.width = '500px';
+        }
+
+        function irudiatxikitu(){
+            var img = document.getElementById('irudiaperro');
+            img.style.width = '100px';
+        }
+    </script>
+</body>
+</html>

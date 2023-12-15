@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>URLa sartu:<input type="text" id="testua1" value="https://www.lavoz.com.ar" size="30"></p>
+    <p>URLa sartu:<input type="text" id="testua2" value="https://www.lanacion.com.ar" size="30"></p>
+    <input type="button" value="Estekak sortu" id="botoia1" onclick="estekakSortu()">
+    <h2>innerHTML erabiliz</h2>
+    <div id="estekak1">
+    </div>
+    <h2>Elementu eta testu nodoak sortuz</h2>
+    <div id="estekak2">
+    </div>
+    <script>
+        function estekakSortu() {
+            // innerHTML erabiliz
+            let erreferentzia1 = document.getElementById("estekak1");
+            erreferentzia1.innerHTML = `<a href="${document.getElementById('testua1').value}">Esteka 1</a> 
+            <br><a href="${document.getElementById('testua2').value}">Esteka 2</a>`;
+
+            // Elementu eta testu nodoak sortuz
+            let elementua = document.createElement('a');
+            let erreferentzia2 = document.getElementById('estekak2');
+            erreferentzia2.appendChild(elementua);
+            let testuNodoa = document.createTextNode('Esteka 1');
+            elementua.appendChild(testuNodoa);
+            elementua.setAttribute('href', document.getElementById('testua1').value);
+            erreferentzia2.appendChild(document.createElement('br'));
+            elementua = document.createElement('a');
+            erreferentzia2.appendChild(elementua);
+            testuNodoa = document.createTextNode('Esteka 2');
+            elementua.appendChild(testuNodoa);
+            elementua.setAttribute('href', document.getElementById('testua2').value);
+        }
+    </script>
+</body>
+
+</html>

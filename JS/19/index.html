@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="taula1">
+        <tr>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>40</td>
+        </tr>
+    </table>
+    <input type="button" value="Aldatu" onClick="aldatuAtributua()">
+    <script>
+        function aldatuAtributua() {
+            let erreferentziaPuntua = document.getElementById('taula1');
+            if (erreferentziaPuntua.hasAttribute('border'))
+                erreferentziaPuntua.removeAttribute('border');
+            else
+                erreferentziaPuntua.setAttribute('border', '5');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Elementu motako nodoa sortu eta href atributua ezarri" onClick="sortuElementuaEtaAtributua()">
+    <div id="helbidea">
+    </div>
+    <script>
+        function sortuElementuaEtaAtributua() {
+            let elementua = document.createElement('a');
+            let erreferentziaPuntua = document.getElementById('helbidea');
+            erreferentziaPuntua.appendChild(elementua);
+            let testuNodoa = document.createTextNode('google');
+            elementua.appendChild(testuNodoa);
+            elementua.setAttribute('href', 'https://www.youtube.com');
+        }
+    </script>
+</body>
+</html>

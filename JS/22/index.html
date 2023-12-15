@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="izenburua1">Testu nagusia.</h1>
+    <input type="button" value="Izenburua aldatu" onclick="aldatuIzenburua()">
+    <input type="button" value="Izenburuaren edukia berreskuratu" onclick="berreskuratuIzenburua()">
+    <script>
+        function aldatuIzenburua() {
+            let izenburua = document.getElementById("izenburua1");
+            izenburua.innerText = "Izenburu berria";
+        }
+
+        function berreskuratuIzenburua() {
+            alert(document.getElementById("izenburua1").innerText);
+        }
+    </script>
+</body>
+</html>

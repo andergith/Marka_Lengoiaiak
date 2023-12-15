@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragrafoa">Testu hasiera:</p>
+    <input type="button" value="Testu nodoa gehitu" onClick="gehitu()">
+    <script>
+        let kontadorea = 1;
+
+        function gehitu() {
+            let tn = document.createTextNode('Testu berria ' + kontadorea + '-');
+            let nparagrafoa = document.getElementById('paragrafoa');
+            nparagrafoa.appendChild(tn);
+            kontadorea++;
+        }
+    </script>
+</body>
+
+</html>

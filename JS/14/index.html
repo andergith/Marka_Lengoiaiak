@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parrafoak">
+        <p>Hau da lehenengo paragrafoa</p>
+        <p>Hau da bigarren paragrafoa</p>
+        <p id="p3">Hau da hirugarren paragrafoa</p>
+        <p>Hau da laugarren paragrafoa</p>
+        <p>Hau da bostgarren paragrafoa</p>
+    </div>
+    <input type="button" value="Bigarren eta hirugarren artean beste paragrafo bat txertatu" onClick="txertatuErdian()">
+    <script>
+        function txertatuErdian() {
+            let elementua = document.createElement('p');
+            let testuNodoa = document.createTextNode('Bigarren eta hirugarren artean beste paragrafo bat');
+            elementua.appendChild(testuNodoa);
+            let erreferentziaPuntua = document.getElementById('p3');
+            let paragrafoZerrenda = document.getElementById('parrafoak');
+            paragrafoZerrenda.insertBefore(elementua, erreferentziaPuntua);
+        }
+    </script>
+</body>
+
+</html>
